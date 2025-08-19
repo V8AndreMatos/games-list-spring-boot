@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 
 public class GameDTO {
 
+    //Versão do game com 5 dados
     private Long id;
     private String title;
     private Integer year;
