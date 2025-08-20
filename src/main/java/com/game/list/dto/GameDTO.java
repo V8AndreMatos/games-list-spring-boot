@@ -1,6 +1,7 @@
 package com.game.list.dto;
 
 import com.game.list.entities.Game;
+import com.game.list.projection.GameProjection;
 import jakarta.persistence.Column;
 
 public class GameDTO {
@@ -21,6 +22,14 @@ public class GameDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameDTO(GameProjection gameProjection) {
+        id = gameProjection.getId();
+        title = gameProjection.getTitle();
+        year = gameProjection.getYear();
+        imgUrl = gameProjection.getImgUrl();
+        shortDescription = gameProjection.getShortDescription();
     }
 
     public Long getId() {
